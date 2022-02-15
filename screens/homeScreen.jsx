@@ -2,12 +2,13 @@ import React from 'react';
 import {View,ScrollView,StyleSheet} from 'react-native';
 import Header from '../components/header';
 import Footer from '../components/footer';
+import Posts from '../components/posts';
 export default class HomeScreen extends React.Component{
     render(){
         return(
             <View style={styles.container}>
                 <Header/>
-                <ScrollView></ScrollView>
+                <Posts/>
                 <Footer sign="<"/>
             </View>
         )
