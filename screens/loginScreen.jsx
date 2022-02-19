@@ -1,7 +1,7 @@
 import React from 'react';
 import {View,StyleSheet} from 'react-native';
 import Header from '../components/header';
-import Footer from '../components/footer';
+// import Footer from '../components/footer';
 import Login from '../components/login';
 
 export default class LoginScreen extends React.Component{
@@ -10,7 +10,7 @@ export default class LoginScreen extends React.Component{
             <View style={styles.container}>
                 <Header/>
                 <Login/>
-                <Footer sign="<"/>
+                {/* <Footer sign="-" goTo="none"/> */}
             </View>
         )
     }

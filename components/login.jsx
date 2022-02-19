@@ -1,17 +1,22 @@
 import React from "react";
-import {Text, TouchableOpacity,StyleSheet,View } from 'react-native';
+import {Text, TouchableOpacity,StyleSheet,View,Image } from 'react-native';
 import { AntDesign } from '@expo/vector-icons';
+// import { Actions } from 'react-native-router-flux';
 
 export default class Login extends React.Component{
-       render(){
-           return (
-               <View style={styles.continer}>
-                   <View style={styles.squre}></View>
-                   <TouchableOpacity style={styles.Racangle}><AntDesign name="google" size={30} color="black" /><Text style={{justifyContent:"space-around",fontSize:20,}}>Login</Text></TouchableOpacity>
-                   
-               </View>
-           )
-       }
+    goToHome=()=>{
+        // Actions.homescreen();
+        console.log("to home");
+    }
+    render(){
+        return (
+            <View style={styles.continer}>
+                <View style={styles.squre}></View>
+                <TouchableOpacity onPress={()=>this.goToHome()} style={styles.Racangle}><AntDesign name="google" size={30} color="black" /><Text style={{justifyContent:"space-around",fontSize:20,}}>Login</Text></TouchableOpacity>
+                <Image source={require('../assets/india.png')} style={{ resizeMode: 'cover', width: 200, height: 200 }}/>
+            </View>
+        )
+    }
 }
 const styles= StyleSheet.create({
     continer:{
@@ -19,8 +24,10 @@ const styles= StyleSheet.create({
         borderBottomWidth:2,
         borderColor:'#E75480',
         flex:1,
-        justifyContent:'space-around',
         alignItems:'center',
+        paddingTop:80,
+        paddingBottom:80,
+        justifyContent:'space-around'
     },
     squre:{
         width: 150,

@@ -1,5 +1,5 @@
 import React from 'react';
-import {View,ScrollView,StyleSheet} from 'react-native';
+import {View,StyleSheet} from 'react-native';
 import Header from '../components/header';
 import Footer from '../components/footer';
 import Upload from '../components/upload';
@@ -10,7 +10,7 @@ export default class uploadScreen extends React.Component{
             <View style={styles.container}>
                 <Header/>
                 <Upload/>
-                <Footer sign="<"/>
+                <Footer sign="<" goTo="home"/>
             </View>
         )
     }

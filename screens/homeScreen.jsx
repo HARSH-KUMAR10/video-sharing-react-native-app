@@ -9,7 +9,7 @@ export default class HomeScreen extends React.Component{
             <View style={styles.container}>
                 <Header/>
                 <Posts/>
-                <Footer sign="<"/>
+                <Footer sign="+" goTo="upload"/>
             </View>
         )
     }
